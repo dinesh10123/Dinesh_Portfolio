@@ -1,0 +1,341 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #4b5563;
+  --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 50%, #ffe4e6 100%);
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --accent-blue: #2563eb;
+  --navbar-bg: rgba(255, 255, 255, 0.6);
+  --navbar-border: rgba(255, 255, 255, 0.4);
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+  --btn-border: #000000;
+  --btn-hover-bg: #333333;
+}
+
+[data-theme='dark'] {
+  --primary-color: #ffffff;
+  --secondary-color: #9ca3af;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #f3f4f6;
+  --text-muted: #d1d5db;
+  --accent-blue: #60a5fa;
+  --navbar-bg: rgba(15, 23, 42, 0.7);
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --btn-bg: #f3f4f6;
+  --btn-text: #0f172a;
+  --btn-border: #f3f4f6;
+  --btn-hover-bg: #e2e8f0;
+}
+
+[data-theme='dark'] img {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+/* Hero Image Custom Handling */
+.hero-image {
+  mix-blend-mode: multiply;
+}
+
+[data-theme='dark'] .hero-image {
+  mix-blend-mode: screen !important;
+  filter: invert(1) brightness(1.5);
+  /* Invert to make white bg black (transparent in screen) and dark lines white */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Utilities */
+.section-padding {
+  padding: 60px 0;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-primary-custom {
+  color: var(--accent-blue) !important;
+}
+
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.bg-card-custom {
+  background-color: var(--card-bg) !important;
+}
+
+
+/* Navbar */
+.navbar-custom {
+  background: var(--navbar-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--navbar-border);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin: 0 8px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 5px 0 !important;
+}
+
+/* Animated Underline Effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Social Icons Circular */
+.social-icon-circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 1px solid var(--glass-border);
+  background: var(--card-bg);
+  color: var(--text-main);
+}
+
+.social-icon-circle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: var(--primary-color);
+  color: var(--btn-text) !important;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 2px solid var(--btn-border);
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-custom:hover {
+  background: var(--btn-hover-bg);
+  border-color: var(--btn-hover-bg);
+  color: var(--btn-text);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--text-main);
+  border: 2px solid var(--text-main);
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background: rgba(125, 125, 125, 0.1);
+  transform: translateY(-2px);
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+/* Contact Form Hover Effect - UPDATED */
+.contact-form-wrapper {
+  transition: all 0.3s ease;
+}
+
+.contact-form-wrapper:hover {
+  box-shadow: none !important;
+  /* Removed box shadow */
+  background-color: transparent !important;
+  /* Removed background box */
+}
+
+/* Ensure form inputs pop on their own container hover */
+/* Custom Form Control Styling */
+.contact-form-wrapper .form-control {
+  border: 2px solid var(--glass-border);
+  background: var(--card-bg);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.contact-form-wrapper .form-control:hover,
+.contact-form-wrapper .form-control:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  background: var(--card-bg);
+  color: var(--text-main);
+}
+
+.contact-form-wrapper .form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+
+/* Skill Card Hover Effect */
+.skill-card {
+  transition: all 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  background-color: var(--primary-color) !important;
+  color: var(--btn-text) !important;
+}
+
+.skill-card:hover span {
+  color: var(--btn-text) !important;
+}
+
+/* Sections */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--text-main);
+}
+
+/* Cards (Glassmorphism for sections) */
+.custom-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Timeline */
+.timeline-item {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: var(--card-bg);
+  border: 4px solid var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -9.5px;
+  top: 5px;
+}
+
+/* Education Card Specifics */
+.education-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(96, 165, 250, 0.15);
+  border-color: var(--accent-blue);
+}
+
+/* Dark Mode Overrides for Bootstrap Utilities */
+[data-theme='dark'] .text-dark {
+  color: #f3f4f6 !important;
+}
+
+[data-theme='dark'] .text-secondary {
+  color: #d1d5db !important;
+}
+
+[data-theme='dark'] .text-muted {
+  color: #9ca3af !important;
+}
+
+[data-theme='dark'] .bg-white {
+  background-color: var(--card-bg) !important;
+  color: var(--text-main);
+}
+
+[data-theme='dark'] .bg-light {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: var(--text-main);
+}
