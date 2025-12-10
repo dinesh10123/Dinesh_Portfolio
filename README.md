@@ -6,7 +6,7 @@ It features a **modern, responsive design** with smooth animations, a dark/light
 ---
 
 ## 🚀 Live Demo
-👉 [View Portfolio](https://your-portfolio-link.com)  
+👉 [View Portfolio](dinesh-portfolio-delta-three.vercel.app)  
 
 ---
 
@@ -60,7 +60,7 @@ Built using the **Next.js App Router** and **Bootstrap**, it ensures fast perfor
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/dinesh10123/portfolio.git
    cd portfolio
 Install dependencies
 
