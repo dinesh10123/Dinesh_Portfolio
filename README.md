@@ -84,7 +84,7 @@ Visit http://localhost:3000
 📂 Project Structure
 php
 Copy code
-``
+---
 portfolio/
 │
 ├── app/                # Next.js App Router pages
@@ -94,7 +94,8 @@ portfolio/
 ├── public/             # Static assets (images, icons)
 ├── styles/             # Global CSS (Tailwind)
 └── actions/            # Server actions (e.g., sendEmail)
-``
+---
+
 📧 Contact
 📩 Email: malidk10123@gmail.com
 💼 LinkedIn: https://linkedin.com/in/dineshmali
