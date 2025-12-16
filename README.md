@@ -13,7 +13,7 @@ It features a **modern, responsive design** with smooth animations, a dark/light
 ## 🧠 Overview
 
 This portfolio represents **who I am as a developer** — highlighting my technical expertise, professional experience, and projects I’ve worked on.  
-Built using the **Next.js App Router** and **Bootstrap**, it ensures fast performance, clean architecture, and scalability.
+Built using the **React** and **Bootstrap**, it ensures fast performance, clean architecture, and scalability.
 
 ---
 
@@ -47,7 +47,7 @@ Built using the **Next.js App Router** and **Bootstrap**, it ensures fast perfor
 
 | Category | Technologies |
 |-----------|---------------|
-| Frontend | React, Next.js, Bootstrap |
+| Frontend | React, Bootstrap |
 | Backend | Next.js Server Actions |
 | Animations | Framer Motion |
 | Email | React.Email, Resend |
@@ -84,6 +84,7 @@ Visit http://localhost:3000
 📂 Project Structure
 php
 Copy code
+``
 portfolio/
 │
 ├── app/                # Next.js App Router pages
@@ -93,6 +94,7 @@ portfolio/
 ├── public/             # Static assets (images, icons)
 ├── styles/             # Global CSS (Tailwind)
 └── actions/            # Server actions (e.g., sendEmail)
+``
 📧 Contact
 📩 Email: malidk10123@gmail.com
 💼 LinkedIn: https://linkedin.com/in/dineshmali
