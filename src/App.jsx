@@ -3,11 +3,13 @@ import MyNavbar from './components/MyNavbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
+import Certifications from './pages/Certifications';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
@@ -34,13 +36,17 @@ function App() {
                     <Home />
                 </div>
 
-                {/* Removed bg-white/bg-light classes to allow global gradient to show */}
+
                 <section id="about" className="section-padding">
                     <About />
                 </section>
 
                 <section id="education" className="section-padding">
                     <Education />
+                </section>
+
+                <section id="certifications" className="section-padding">
+                    <Certifications />
                 </section>
 
                 <section id="projects" className="section-padding">
@@ -60,6 +66,7 @@ function App() {
                 </section>
             </main>
             <Footer />
+            <ScrollToTop />
             <Toaster position="top-right" />
         </div>
     );

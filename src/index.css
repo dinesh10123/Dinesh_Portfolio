@@ -13,6 +13,7 @@
   --btn-text: #ffffff;
   --btn-border: #000000;
   --btn-hover-bg: #333333;
+  --card-border-color: rgba(0, 0, 0, 0.5);
 }
 
 [data-theme='dark'] {
@@ -30,6 +31,7 @@
   --btn-text: #0f172a;
   --btn-border: #f3f4f6;
   --btn-hover-bg: #e2e8f0;
+  --card-border-color: var(--accent-blue);
 }
 
 [data-theme='dark'] img {
@@ -274,7 +276,7 @@ body {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
   color: var(--text-main);
-  border: 1px solid var(--glass-border);
+  border: 2px solid var(--card-border-color);
   border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
   transition: transform 0.3s ease, background 0.3s ease;
@@ -307,7 +309,7 @@ body {
 /* Education Card Specifics */
 .education-card {
   transition: all 0.3s ease;
-  border: 1px solid var(--glass-border);
+  border: 2px solid var(--card-border-color);
   color: var(--text-main);
 }
 

@@ -3,6 +3,7 @@ export const links = [
     { name: "Home", hash: "#home" },
     { name: "About", hash: "#about" },
     { name: "Education", hash: "#education" },
+    { name: "Certifications", hash: "#certifications" },
     { name: "Projects", hash: "#projects" },
     { name: "Skills", hash: "#skills" },
     { name: "Experience", hash: "#experience" },
@@ -84,6 +85,34 @@ export const projectsData = [
     },
 ];
 
+export const certificationsData = [
+    {
+        title: "Java Full Stack (Udemy)",
+        description: "Mastering Java + Spring Boot: REST APIs and Microservices",
+        link: "https://www.udemy.com/certificate/UC-b1ae1199-30b0-4602-93ee-648e1471d7eb/"
+    },
+    {
+        title: "JavaScript (Udemy)",
+        description: "Completed hands-on training in ES6+, DOM manipulation, asynchronous programming.",
+        link: "https://www.udemy.com/certificate/UC-310b92b6-8bfd-4f14-8975-e2dec4a706cd/"
+    },
+    {
+        title: "Data Structures and Algorithms",
+        description: "Gained strong understanding of data structures and algorithms using Java.",
+        link: "https://drive.google.com/file/d/1HZkCUjrAzZ8mqZ3KYwihPDDUFYgbI3YT/view?usp=sharing"
+    },
+    {
+        title: "C++ (Udemy)",
+        description: "Completed comprehensive course covering OOP principles, STL, and advanced features",
+        link: "https://www.udemy.com/certificate/UC-67dbd5cb-49e5-42de-bf55-adf5f4c5f7ec/"
+    },
+    {
+        title: "SQL (Infosys Springboard)",
+        description: "Gained proficiency in writing queries, joins, aggregations, and working with RDBS.",
+        link: "https://drive.google.com/file/d/1S2_dCkqp6jQDqo7PcB0onlXnSGdQRYea/view?usp=sharing"
+    }
+];
+
 export const skillsData = [
     "HTML",
     "CSS",
@@ -99,7 +128,6 @@ export const skillsData = [
     "Hibernate",
     "Node.js",
     "Git",
-    "Tailwind",
     "MongoDB",
     "Redux",
     "Express",
